@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thailand 2026</title>
+    <meta name="theme-color" content="#0a0a12" />
+    <meta name="description" content="Personal Bangkok + Phuket travel companion PWA" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/icon-192.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar glass">
+        <h1>Thailand Trip 2026 🇹🇭</h1>
+        <p>Bangkok • Phuket • Island Life</p>
+      </header>
+
+      <main id="tab-content">
+        <section id="home" class="tab-panel active">
+          <article class="card hero">
+            <h2>Thailand Trip 2026 🇹🇭</h2>
+            <p>Bangkok • Phuket • Island Life</p>
+            <button id="startJourney" class="btn-accent">Start Journey</button>
+          </article>
+
+          <article class="card">
+            <h3>Your Trip Map (All Locations Pinned)</h3>
+            <a class="map-link" href="https://maps.app.goo.gl/ckGudRjJ9TaiSWjA8?g_st=iw" target="_blank" rel="noopener noreferrer">Open Master Map</a>
+          </article>
+
+          <article class="card snapshot">
+            <h3>Trip Snapshot</h3>
+            <ul>
+              <li>6 Days</li>
+              <li>Bangkok + Phuket</li>
+              <li>Culture + Party + Chill</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Live Weather</h3>
+            <p class="muted">Online: fresh weather from Open-Meteo. Offline: last synced weather snapshot.</p>
+            <div id="weatherWidget" class="weather-grid"></div>
+          </article>
+
+          <article class="card">
+            <h3>Trip Calendar</h3>
+            <div id="calendarWidget"></div>
+          </article>
+
+          <article class="card">
+            <h3>Interactive Checklist</h3>
+            <div class="progress-wrap">
+              <div id="checklistProgressBar"></div>
+            </div>
+            <p id="checklistProgressText">0% complete</p>
+            <div id="checklistContainer"></div>
+          </article>
+        </section>
+
+        <section id="itinerary" class="tab-panel">
+          <h2>Itinerary</h2>
+          <div id="itineraryContainer"></div>
+        </section>
+
+        <section id="explore" class="tab-panel">
+          <h2>Explore</h2>
+          <div id="exploreContainer"></div>
+        </section>
+
+        <section id="moodboard" class="tab-panel">
+          <h2>Moodboard</h2>
+          <div id="moodboardGrid" class="grid"></div>
+        </section>
+
+        <section id="docs" class="tab-panel">
+          <h2>Docs</h2>
+          <div class="docs-grid">
+            <a class="card" href="/flight-bkk.pdf" target="_blank" rel="noopener noreferrer">Flight Departure</a>
+            <a class="card" href="/flight-return.pdf" target="_blank" rel="noopener noreferrer">Flight Return</a>
+            <a class="card" href="/hotel-bkk.pdf" target="_blank" rel="noopener noreferrer">Bangkok Hotel</a>
+            <a class="card" href="/hotel-phuket.pdf" target="_blank" rel="noopener noreferrer">Phuket Hotel</a>
+          </div>
+          <article class="card">
+            <h3>Master Google Links</h3>
+            <div id="masterLinks"></div>
+          </article>
+        </section>
+
+        <section id="birthday" class="tab-panel">
+          <article class="card placeholder">
+            <h2>Birthday</h2>
+            <p>Coming soon 🎂</p>
+          </article>
+        </section>
+      </main>
+
+      <nav class="tabbar glass">
+        <button data-tab="home" class="tab-btn active">Home</button>
+        <button data-tab="itinerary" class="tab-btn">Itinerary</button>
+        <button data-tab="explore" class="tab-btn">Explore</button>
+        <button data-tab="moodboard" class="tab-btn">Moodboard</button>
+        <button data-tab="docs" class="tab-btn">Docs</button>
+        <button data-tab="birthday" class="tab-btn">Birthday</button>
+      </nav>
+    </div>
+
+    <dialog id="imageModal">
+      <img id="modalImage" alt="Moodboard full" />
+      <button id="closeModal">Close</button>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
