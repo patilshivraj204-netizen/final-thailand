@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="Thailand 2026 icon">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff7a18"/>
+      <stop offset="100%" stop-color="#ff3d77"/>
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="36" fill="#0a0a12"/>
+  <circle cx="96" cy="96" r="72" fill="url(#g)" opacity="0.9"/>
+  <text x="96" y="104" text-anchor="middle" fill="white" font-size="58" font-family="system-ui">🇹🇭</text>
+</svg>
